@@ -22,10 +22,11 @@ get_header(); ?>
 			<?php /* Start the Loop */ ?>
 			<?php
 $args = array(
-	'numberposts' => 10,
+	'numberposts' => 3,	
 );
-$front_page_blog_posts = get_posts($args);?>
 
+$recent_posts = wp_get_recent_posts( $args, ARRAY_A );
+?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'template-parts/content' ); ?>

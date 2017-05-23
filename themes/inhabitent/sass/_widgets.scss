@@ -17,8 +17,10 @@
 }
 
 #secondary{
-	width:100px;
+	width:150px;
 	display:flex;
   flex-flow:column nowrap;
   justify-content:flex-end;
+	
+	margin-left:auto;
 }

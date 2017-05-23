@@ -34,12 +34,14 @@
   color:white;
   height:40vh;
   background:url('../../assets/images/dark-wood.png') bottom repeat-x;
+  
 }
 
 h3{
   color:#d99054;
 }
 .ftr-section{
+  box-sizing: border-box;
   display:flex;
   flex-direction: row; 
   flex-wrap:wrap;

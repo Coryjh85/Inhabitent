@@ -9,7 +9,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="about-main" class="about-main" role="about-main">
        <section class="about-hero">
-				
+				</section>
 		<?php if ( have_posts() ) : ?>
 
 			<?php if ( is_page()) : ?>

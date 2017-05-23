@@ -1,7 +1,7 @@
 /*!
-Theme Name: RED Starter Theme
+Theme Name: Inhabitent
 Theme URI: http://underscores.me/
-Author: RED Academy
+Author: Cory Hall
 Author URI: http://www.redacademy.com
 Description: A WordPress starter theme for RED Academy students.
 Version: 1.0.0
@@ -420,9 +420,13 @@ a {
 
 /* Menus */
 .menu {
-  float: right;
+  display: -ms-flexbox;
+  display: flex;
   text-decoration: none;
   padding-bottom: 100vh; }
+
+.menu li {
+  padding-right: 2%; }
 
 .menu li a {
   color: white; }
@@ -565,6 +569,16 @@ a {
 .widget_search .search-submit {
   display: none; }
 
+#secondary {
+  width: 150px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  margin-left: auto; }
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -690,6 +704,7 @@ h3 {
   color: #d99054; }
 
 .ftr-section {
+  box-sizing: border-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
@@ -712,3 +727,6 @@ h3 {
 .site-info {
   display: inline-block;
   margin: 0 auto; }
+
+.entry-header {
+  display: none; }
