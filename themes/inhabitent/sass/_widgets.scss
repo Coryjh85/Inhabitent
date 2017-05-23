@@ -15,3 +15,10 @@
 .widget_search .search-submit {
 	display: none;
 }
+
+#secondary{
+	width:100px;
+	display:flex;
+  flex-flow:column nowrap;
+  justify-content:flex-end;
+}

@@ -25,7 +25,21 @@ a {
 }
 
 /* Menus */
-
+.menu{
+	display:flex;
+	float:right;
+  text-decoration: none;
+	padding-bottom:100vh;
+}
+.menu li{
+	padding-right:2%;
+}
+.menu li a{
+	color:white
+}
+.menu li a:visited{
+	color:white;
+}
 .main-navigation {
 	clear: both;
 	display: block;

@@ -3,3 +3,67 @@
 --------------------------------------------------------------*/
 
 /* Front page */
+.front-hero {
+    background:
+    url('../../assets/images/logos/inhabitent-logo-full.svg') center no-repeat,
+    linear-gradient(to bottom, rgba(0, 0, 0 ,0.5), rgba(100,100,100,0.5)) center,
+    url('../../assets/images/home-hero.jpg') top no-repeat;
+  background-size:
+    300px,
+    cover,
+    cover;
+  height: 100vh;
+}
+
+
+/* About Page */
+
+.about-hero {
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0 ,0.5), rgba(100,100,100,0.5)) center,
+    url('../../assets/images/about-hero.jpg') bottom no-repeat;
+  background-size:
+    cover,
+    cover;
+  height: 100vh;
+}
+
+/* footer stuff */
+.site-footer{
+  justify-content: space-around;
+  color:white;
+  height:40vh;
+  background:url('../../assets/images/dark-wood.png') bottom repeat-x;
+}
+
+h3{
+  color:#d99054;
+}
+.ftr-section{
+  display:flex;
+  flex-direction: row; 
+  flex-wrap:wrap;
+}
+
+.contact{
+  width:33%;
+  margin:auto auto;
+}
+.hours{
+  width:33%;
+  margin:auto auto;
+}
+
+.foot-logo{
+  width:33%;  
+  margin:auto auto;
+}
+
+.site-info{
+  display:inline-block;
+  margin: 0 auto;
+}
+
+.entry-header{
+  display: none;
+}

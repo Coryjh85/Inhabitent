@@ -29,7 +29,8 @@ function inhabitent_remove_submenus() {
 add_action( 'admin_menu', 'inhabitent_remove_submenus', 110 );
 
 
-// Custom login screen pic
+// Custom login screen pic and linking to homepage
+
 function inhabitent_login() {
      echo '<style type="text/css">                                                                   
         #login h1 a { background:url('.get_stylesheet_directory_uri().'/assets/images/inhabitent-logo-text-dark.svg) no-repeat;
