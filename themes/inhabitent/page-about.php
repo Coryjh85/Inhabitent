@@ -2,7 +2,7 @@
 /**
  * The About template file.
  *
- * @package inhabitent_theme_Theme
+ * @package inhabitent_theme
  */
 get_header(); ?>
 
@@ -33,7 +33,10 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 		<?php endif; ?>
-
+<h2> Our Story </h2>
+			<?php echo CFS()->get( 'our_story' );?>
+			<h2> Our Team </h2>
+      <?php echo CFS()->get( 'our_team' );?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

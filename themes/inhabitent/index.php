@@ -19,22 +19,26 @@ get_header(); ?>
 			<?php endif; ?>
 
 			<?php /* Start the Loop */ ?>
+		
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'template-parts/content' ); ?>
-
+				<?php get_template_part( 'template-parts/content', 'price' ); ?>
+      <?php	if ( has_post_thumbnail() ) {
+	       the_post_thumbnail('large');
+				 } 
+         ?>
 			<?php endwhile; ?>
 
 			<?php the_posts_navigation(); ?>
 
 		<?php else : ?>
 
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+	
 
 		<?php endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

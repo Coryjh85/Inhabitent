@@ -20,12 +20,15 @@
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php $the_query = new WP_Query( 'posts_per_page=16' );
+			    while ( have_posts() ) : the_post(); ?>
 
-				<?php
-					get_template_part( 'template-parts/content' );
-				?>
-
+         <?php	if ( has_post_thumbnail() ) {
+	       the_post_thumbnail('medium');
+				} 
+         ?>
+				  
+				 <?php echo CFS()->get( 'price' ); ?>
 			<?php endwhile; ?>
 
 			<?php the_posts_navigation(); ?>

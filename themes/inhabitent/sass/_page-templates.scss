@@ -13,6 +13,7 @@
     cover,
     cover;
   height: 100vh;
+
 }
 
 
@@ -68,4 +69,20 @@ h3{
 
 .entry-header{
   display: none;
+}
+
+// ------Blog Page-------
+.content-area{
+  margin:0 auto;
+}
+
+//---------front page posts---------
+.post{
+ display:inline;
+  margin:0 auto;
+  width:25%;
+}
+
+.entry-content{
+  width:50vh;
 }

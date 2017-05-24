@@ -422,8 +422,7 @@ a {
 .menu {
   display: -ms-flexbox;
   display: flex;
-  text-decoration: none;
-  padding-bottom: 100vh; }
+  text-decoration: none; }
 
 .menu li {
   padding-right: 2%; }
@@ -730,3 +729,14 @@ h3 {
 
 .entry-header {
   display: none; }
+
+.content-area {
+  margin: 0 auto; }
+
+.post {
+  display: inline;
+  margin: 0 auto;
+  width: 25%; }
+
+.entry-content {
+  width: 50vh; }

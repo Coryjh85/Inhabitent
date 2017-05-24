@@ -20,13 +20,19 @@ get_header(); ?>
 			<?php endif; ?>
 
 			<?php /* Start the Loop */ ?>
-			<?php
-$args = array(
-	'numberposts' => 3,	
-);
+			<?php 
+            $the_query = new WP_Query( 'posts_per_page=3&order=ASC' );
+            while ($the_query -> have_posts()) : $the_query -> the_post();
+            ?>
+            <section class = "post"> <?php the_post_thumbnail('medium') ?> <h2 class="post-date-front"> <?php the_date() ?> </h2><h1 class="post-title-front"> <?php the_title() ?> </h1><a>Read Entry</a></section>
+          <?php
+            endwhile;
+            wp_reset_postdata();
+            ?>
 
-$recent_posts = wp_get_recent_posts( $args, ARRAY_A );
-?>
+
+
+				
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'template-parts/content' ); ?>
