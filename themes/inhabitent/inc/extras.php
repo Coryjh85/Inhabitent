@@ -48,3 +48,39 @@ function inhabitent_login_title(){
 	return 'Inhabitent';
 }
 add_filter('login_headertitle', 'inhabitent_login_title');
+
+//pre_get_posts to change settings for shop page
+
+function inhabitent_home_pagesize( $query ) {
+    if ( is_admin() || ! $query->is_main_query())
+        return;
+
+   if (( is_post_type_archive( 'product' ) ) || $query->is_tax('product-type')) {
+        
+                $query->set( 'posts_per_page', 16 );
+				$query->set( 'order', 'ASC' );
+				$query->set( 'orderby', 'title' );
+        return;
+    }
+}
+add_action( 'pre_get_posts', 'inhabitent_home_pagesize', 1 ); 
+
+
+//-------about page hero banner changer----------//
+function my_styles_method() {
+    wp_enqueue_style(
+        'custom-style',
+        get_template_directory_uri() . '/build/css/style.min.css'
+    );
+        $background = CFS()->get( 'hero_image' ); 
+        $custom_css = "
+                .about_hero{
+                        background: linear-gradient(to bottom, rgba(0, 0, 0 ,0.5), rgba(100,100,100,0.5)) center,
+                        url({$background}) bottom no-repeat;
+                        background-size: cover, cover;
+                        height: 100vh;
+                }";
+    wp_add_inline_style( 'custom-style', $custom_css );
+}
+add_action( 'wp_enqueue_scripts', 'my_styles_method' );
+ 

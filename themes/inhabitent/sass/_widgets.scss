@@ -15,12 +15,17 @@
 .widget_search .search-submit {
 	display: none;
 }
+.widget-area{
 
+}
 #secondary{
-	width:150px;
-	display:flex;
-  flex-flow:column nowrap;
-  justify-content:flex-end;
+	width:27%;
 	
-	margin-left:auto;
+	position:absolute;
+	right:0;
+	bottom:403px;
+}
+#primary{
+	max-width:73%;
+	margin:0;
 }

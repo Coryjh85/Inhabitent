@@ -20,13 +20,12 @@ get_header(); ?>
 
 			<?php /* Start the Loop */ ?>
 		
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php $the_query = new WP_Query( 'posts_per_page=16' );
+			    while ( have_posts() ) : the_post(); ?>
+        <section class = "blog-post"> <a class="blog-pic" href="<?php the_permalink() ?>"><?php the_post_thumbnail('large');?></a>
+				<h1 class="blog-post-title"> <?php the_title();?></h1>
+				<h2 class="blog-post-excerpt"><?php the_excerpt();?> </h2></section>
 
-				<?php get_template_part( 'template-parts/content', 'price' ); ?>
-      <?php	if ( has_post_thumbnail() ) {
-	       the_post_thumbnail('large');
-				 } 
-         ?>
 			<?php endwhile; ?>
 
 			<?php the_posts_navigation(); ?>

@@ -1,22 +1,23 @@
 <?php
 /**
- * The About template file.
+ *Template Name: About page
  *
  * @package inhabitent_theme
  */
 get_header(); ?>
-
-	<div id="primary" class="content-area">
-		<main id="about-main" class="about-main" role="about-main">
-       <section class="about-hero">
+<section class="about_hero">
 				</section>
+	<div id="primary" class="content-area">
+		
+		<main id="about-main" class="about-main" role="about-main">
+      
 		<?php if ( have_posts() ) : ?>
 
 			<?php if ( is_page()) : ?>
 				<header>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
-				 </section>
+			
 			<?php endif; ?>
 
 			<?php /* Start the Loop */ ?>
@@ -34,11 +35,11 @@ get_header(); ?>
 
 		<?php endif; ?>
 <h2> Our Story </h2>
+
 			<?php echo CFS()->get( 'our_story' );?>
 			<h2> Our Team </h2>
       <?php echo CFS()->get( 'our_team' );?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

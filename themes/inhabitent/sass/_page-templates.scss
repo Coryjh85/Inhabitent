@@ -3,7 +3,10 @@
 --------------------------------------------------------------*/
 
 /* Front page */
-.front-hero {
+.main{
+  margin:0 auto;
+}
+.main-hero{
     background:
     url('../../assets/images/logos/inhabitent-logo-full.svg') center no-repeat,
     linear-gradient(to bottom, rgba(0, 0, 0 ,0.5), rgba(100,100,100,0.5)) center,
@@ -13,20 +16,81 @@
     cover,
     cover;
   height: 100vh;
-
 }
 
+.shop-card{
+  max-width:23%;
+  
+  margin:0 auto;
+  text-align: center;
+  border:lightgrey 1px solid;
+  border-top:lightgrey 5px solid;
+}
+.shop-card-list{
+  list-style-type: none;
+  display:flex;
+  flex-flow:row;
+  flex-wrap: nowrap;
+  margin:0 auto;
+}
+.shop-card img{
+  margin:0 auto;
+  width:71px;
+  height:71px;
+}
+.front-shop-button{
+  color:white;
+  background-color: #248A83;
+  margin:0 auto;
+}
+.front-shop-icon{
+  
+}
+.front-shop-excerpt{
+  margin:0 auto;
+}
+
+.post{
+ display:inline-block;
+  margin:0 15px;
+  text-align: center;
+  border:lightgrey 2px solid;
+  width:300px;
+}
+
+.front-main-container{
+  margin:0 auto;
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width:1120px;
+}
+
+.site-main{
+  display:flex;
+  width:1120px;
+  margin:0 auto;
+}
+.front-posts{
+  width:1120px;
+  margin:0 auto;
+  align-content: center;
+  
+  padding:10px;
+  text-align: center;
+}
 
 /* About Page */
 
-.about-hero {
-  background:
-    linear-gradient(to bottom, rgba(0, 0, 0 ,0.5), rgba(100,100,100,0.5)) center,
-    url('../../assets/images/about-hero.jpg') bottom no-repeat;
-  background-size:
-    cover,
-    cover;
-  height: 100vh;
+#about-main{
+  margin:0 auto;
+  width:1120px;
+}
+.s1 .s2{
+  width:1120px;
+}
+.container{
+  width:1120px;
 }
 
 /* footer stuff */
@@ -35,7 +99,6 @@
   color:white;
   height:40vh;
   background:url('../../assets/images/dark-wood.png') bottom repeat-x;
-  
 }
 
 h3{
@@ -46,19 +109,22 @@ h3{
   display:flex;
   flex-direction: row; 
   flex-wrap:wrap;
+  justify-content: space-around;
+  width:1120px;
+  margin:0 auto;
 }
 
 .contact{
-  width:33%;
+  width:25%;
   margin:auto auto;
 }
 .hours{
-  width:33%;
+  width:50%;
   margin:auto auto;
 }
 
 .foot-logo{
-  width:33%;  
+  width:25%;  
   margin:auto auto;
 }
 
@@ -75,14 +141,42 @@ h3{
 .content-area{
   margin:0 auto;
 }
-
-//---------front page posts---------
-.post{
- display:inline;
-  margin:0 auto;
-  width:25%;
+.blog-pic{
+  height:1026px;
 }
 
-.entry-content{
-  width:50vh;
+
+
+
+//--------products----------
+
+.product{
+  display:inline-block;
+  margin:10px 10px;
+  border:lightgrey 2px solid;
+  width:200px;
+}
+
+.wp-post-image{
+  object-fit: cover;
+  width:inherit;
+  height:200px;
+}
+
+//---------Single Products-------//
+.product-listing{
+  width:50%;
+}
+
+.product-picture{
+  height:auto;
+}
+
+
+
+
+
+h2{
+  display:block;
+  margin:0 auto;
 }

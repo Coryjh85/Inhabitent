@@ -2,7 +2,7 @@
 /**
  * The header for our theme.
  *
- * @package inhabitent_theme_Theme
+ * @package inhabitent_theme
  */
 
 ?><!DOCTYPE html>
@@ -29,11 +29,17 @@
 					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 				</div><!-- .site-branding -->
 
-
+      
+			<div class="menu-div">	
+				
+				<a href= url("http://localhost:3000/wp_project04/")rel="home">	<div class="tent"></div> </a>
+				
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-				</nav><!-- #site-navigation -->
+		  	</nav><!-- #site-navigation -->
+			 
+			  </div>
 			</header><!-- #masthead -->
 
 			<div id="content" class="site-content">

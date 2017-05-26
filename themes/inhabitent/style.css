@@ -222,6 +222,20 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'novecentosanswide';
+  src: url("../../fonts/novecentosanswide-demibold-webfont.eot");
+  src: url("../../fonts/novecentosanswide-demibold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/novecentosanswide-demibold-webfont.woff2") format("woff2"), url("../../fonts/novecentosanswide-demibold-webfont.woff") format("woff"), url("../../fonts/novecentosanswide-demibold-webfont.ttf") format("truetype"), url("../../fonts/novecentosanswide-demibold-webfont.svg#webfontregular") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'novecentosanswide';
+  src: url("../../fonts/novecentosanswide-normal-webfont.eot");
+  src: url("../../fonts/novecentosanswide-normal-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/novecentosanswide-normal-webfont.woff2") format("woff2"), url("../../fonts/novecentosanswide-normal-webfont.woff") format("woff"), url("../../fonts/novecentosanswide-normal-webfont.ttf") format("truetype"), url("../../fonts/novecentosanswide-normal-webfont.svg#webfontregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -238,7 +252,9 @@ textarea {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  clear: both; }
+  clear: both;
+  -ms-flex-align: center;
+      align-items: center; }
 
 /* Copy */
 p {
@@ -420,12 +436,29 @@ a {
 
 /* Menus */
 .menu {
+  -ms-flex-direction: row;
+      flex-direction: row;
+  text-decoration: none;
+  right: 5%; }
+
+.tent {
+  z-index: 9999;
+  width: 50px;
+  height: 50px;
+  background: url("../../assets/images/logos/inhabitent-logo-tent-white.svg") center;
+  background-size: 50px 50px; }
+
+.menu-div {
+  width: 100vh;
+  position: absolute;
   display: -ms-flexbox;
   display: flex;
-  text-decoration: none; }
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
 
 .menu li {
-  padding-right: 2%; }
+  padding-right: 2%;
+  text-shadow: 1px 1px 2px #3d3d3d; }
 
 .menu li a {
   color: white; }
@@ -436,7 +469,6 @@ a {
 .main-navigation {
   clear: both;
   display: block;
-  float: left;
   width: 100%; }
   .main-navigation ul {
     display: none;
@@ -569,14 +601,14 @@ a {
   display: none; }
 
 #secondary {
-  width: 150px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: column nowrap;
-      flex-flow: column nowrap;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
-  margin-left: auto; }
+  width: 27%;
+  position: absolute;
+  right: 0;
+  bottom: 403px; }
+
+#primary {
+  max-width: 73%;
+  margin: 0; }
 
 /*--------------------------------------------------------------
 # Content
@@ -680,16 +712,85 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
-.front-hero {
+.main {
+  margin: 0 auto; }
+
+.main-hero {
   background: url("../../assets/images/logos/inhabitent-logo-full.svg") center no-repeat, linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(100, 100, 100, 0.5)) center, url("../../assets/images/home-hero.jpg") top no-repeat;
   background-size: 300px, cover, cover;
   height: 100vh; }
 
+.shop-card {
+  max-width: 23%;
+  margin: 0 auto;
+  text-align: center;
+  border: lightgrey 1px solid;
+  border-top: lightgrey 5px solid; }
+
+.shop-card-list {
+  list-style-type: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row;
+      flex-flow: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin: 0 auto; }
+
+.shop-card img {
+  margin: 0 auto;
+  width: 71px;
+  height: 71px; }
+
+.front-shop-button {
+  color: white;
+  background-color: #248A83;
+  margin: 0 auto; }
+
+.front-shop-excerpt {
+  margin: 0 auto; }
+
+.post {
+  display: inline-block;
+  margin: 0 15px;
+  text-align: center;
+  border: lightgrey 2px solid;
+  width: 300px; }
+
+.front-main-container {
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 1120px; }
+
+.site-main {
+  display: -ms-flexbox;
+  display: flex;
+  width: 1120px;
+  margin: 0 auto; }
+
+.front-posts {
+  width: 1120px;
+  margin: 0 auto;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 10px;
+  text-align: center; }
+
 /* About Page */
-.about-hero {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(100, 100, 100, 0.5)) center, url("../../assets/images/about-hero.jpg") bottom no-repeat;
-  background-size: cover, cover;
-  height: 100vh; }
+#about-main {
+  margin: 0 auto;
+  width: 1120px; }
+
+.s1 .s2 {
+  width: 1120px; }
+
+.container {
+  width: 1120px; }
 
 /* footer stuff */
 .site-footer {
@@ -709,18 +810,22 @@ h3 {
   -ms-flex-direction: row;
       flex-direction: row;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 1120px;
+  margin: 0 auto; }
 
 .contact {
-  width: 33%;
+  width: 25%;
   margin: auto auto; }
 
 .hours {
-  width: 33%;
+  width: 50%;
   margin: auto auto; }
 
 .foot-logo {
-  width: 33%;
+  width: 25%;
   margin: auto auto; }
 
 .site-info {
@@ -733,10 +838,26 @@ h3 {
 .content-area {
   margin: 0 auto; }
 
-.post {
-  display: inline;
-  margin: 0 auto;
-  width: 25%; }
+.blog-pic {
+  height: 1026px; }
 
-.entry-content {
-  width: 50vh; }
+.product {
+  display: inline-block;
+  margin: 10px 10px;
+  border: lightgrey 2px solid;
+  width: 200px; }
+
+.wp-post-image {
+  object-fit: cover;
+  width: inherit;
+  height: 200px; }
+
+.product-listing {
+  width: 50%; }
+
+.product-picture {
+  height: auto; }
+
+h2 {
+  display: block;
+  margin: 0 auto; }
