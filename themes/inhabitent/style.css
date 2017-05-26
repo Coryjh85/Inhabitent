@@ -450,7 +450,6 @@ a {
 
 .menu-div {
   width: 100vh;
-  position: absolute;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
@@ -597,18 +596,11 @@ a {
     max-width: 100%; }
 
 /* Search widget. */
-.widget_search .search-submit {
-  display: none; }
-
 #secondary {
-  width: 27%;
-  position: absolute;
-  right: 0;
-  bottom: 403px; }
+  width: 27%; }
 
 #primary {
-  max-width: 73%;
-  margin: 0; }
+  max-width: 73%; }
 
 /*--------------------------------------------------------------
 # Content
@@ -750,6 +742,9 @@ object {
 .front-shop-excerpt {
   margin: 0 auto; }
 
+.dots {
+  border-bottom: dotted; }
+
 .post {
   display: inline-block;
   margin: 0 15px;
@@ -768,8 +763,6 @@ object {
   width: 1120px; }
 
 .site-main {
-  display: -ms-flexbox;
-  display: flex;
   width: 1120px;
   margin: 0 auto; }
 

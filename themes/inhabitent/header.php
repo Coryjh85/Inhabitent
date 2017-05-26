@@ -23,23 +23,25 @@
 			<header id="masthead" class="site-header" role="banner">
 				<div class="site-branding">
 					<h1 class="site-title screen-reader-text">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<img src="<?php echo get_template_directory_uri(). "./assets/images/logos/inhabitent-logo-tent.svg" ?>"  alt="" ?>
-				</a></h1>
-					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+					  <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						  <img src="<?php echo get_template_directory_uri(). "./assets/images/logos/inhabitent-logo-tent.svg" ?>"  alt="" ?>
+				    </a>
+					</h1>
+				<p class="site-description"> <?php bloginfo( 'description' ); ?>
+			</p>
 				</div><!-- .site-branding -->
 
       
-			<div class="menu-div">	
-				
-				<a href= url("http://localhost:3000/wp_project04/")rel="home">	<div class="tent"></div> </a>
-				
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		  	</nav><!-- #site-navigation -->
-			 
+			<div class="menu-div">					
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				  <div class="tent">
+			    </div> 
+				</a>				
+				  <nav id="site-navigation" class="main-navigation" role="navigation">
+					  <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
+					    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>		  	
+				   </nav><!-- #site-navigation -->			 
 			  </div>
 			</header><!-- #masthead -->
 
-			<div id="content" class="site-content">
+			

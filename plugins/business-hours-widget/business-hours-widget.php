@@ -130,11 +130,6 @@ class Business_Hours_Widget extends WP_Widget {
 			$instance['sunday'] = strip_tags($new_instance['sunday']);
 
 		return $instance;
-
-     
-
-     
-
 	} // end widget
 
 	/**
