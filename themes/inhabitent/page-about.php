@@ -6,6 +6,7 @@
  */
 get_header(); ?>
 <section class="about_hero">
+			<h1>About</h1>
 				</section>
 	<div id="primary" class="content-area">
 		
@@ -34,11 +35,13 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 		<?php endif; ?>
+		<section class="about-content">
 <h2> Our Story </h2>
 
 			<?php echo CFS()->get( 'our_story' );?>
 			<h2> Our Team </h2>
       <?php echo CFS()->get( 'our_team' );?>
+		  </div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

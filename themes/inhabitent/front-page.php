@@ -13,7 +13,7 @@ get_header(); ?>
      
 <div class="front-main-container">
 		
-			<h1>Shop Stuff</h2>
+			<h1>Shop Stuff</h1>
   <div class="front-products">
 			<ul class="shop-card-list">
 				<?php 
@@ -43,7 +43,7 @@ get_header(); ?>
 			</ul>
 		</div>
 	<!-- shop cards -->
-<h1>Inhabitent Journal</h2>
+<h1>Inhabitent Journal</h1>
 		<?php if ( have_posts() ) : ?>
 			<?php if (is_front_page() ) : ?>
 			
@@ -53,18 +53,24 @@ get_header(); ?>
 
 		
 		<div class="front-posts">	
-			<?php 
-            $the_query = new WP_Query( 'posts_per_page=3&order=ASC' );
-            while ($the_query -> have_posts()) : $the_query -> the_post();
-          ?>
-            <div class = "post"> <?php the_post_thumbnail('medium') ?> <div class="front-post-date"><?php the_time('F jS, Y'); ?> / <?php comments_popup_link('0 comments ', '1 comment', '% comments'); ?></div>
-						<h1 class="post-title-front"> <a href="<?php the_permalink() ?>"><?php the_title() ?></a> </h1><div class="front-blog-url"><a href="<?php the_permalink() ?>">Read Entry</a></div></div>
+			<?php $the_query = new WP_Query( 'posts_per_page=3&order=ASC' );
+        while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
+           
+				  <div class = "front-post"> <?php the_post_thumbnail('large') ?> 
+					  <div class="front-post-date"><?php the_time('F jS, Y'); ?> / <?php comments_popup_link('0 comments ', '1 comment', '% comments'); ?>
+						</div>
+						<h2 class="front-post-title"> <a href="<?php the_permalink() ?>"><?php the_title() ?></a> </h2>
+						<div class="front-blog-url"><a class="read-entry" href="<?php the_permalink() ?>">Read Entry</a>
+					</div>
+			 </div>
          
+
+
 				  <?php
             endwhile;
-            wp_reset_postdata();
-          ?>
-
+						  wp_reset_postdata();?>
+   
+         
 
 					<?php /* Start the Loop */ ?>
 			
@@ -76,8 +82,34 @@ get_header(); ?>
 
 		<?php endif; ?>
 		</div>
-      </div>
-		</main><!-- #main -->
+
+		<h1>Latest Adventures</h1>
+<ul class="adventure-feed-list">
+	
+			 <li class="indvid-adventure-box" >
+						 <span class=" adventure-image-1"></span>
+            <h1>Getting Back to Nature in a Canoe</h1>
+					 <button>Read More</button>
+				</li>
+		
+			 <li class="indvid-adventure-box">
+						 <span class=" adventure-image-2"></span>
+            <h1>A Night with Friends at the Beach</h1>
+					  <button>Read More</button>
+				</li>
+			 <li class="indvid-adventure-box">
+				     <span class=" adventure-image-3"></span>
+            <h2>Star-Gazing at the Night Sky</h2>
+					  <button>Read More</button>
+				</li>
+			 <li class="indvid-adventure-box">
+						 <span class=" adventure-image-4"></span>
+            <h2>Taking in the View at Big Mountain</h2>
+            <button>Read More</button>
+				</li>
+    </ul> 
+  </div>
+</main><!-- #main -->
 	<!-- #primary -->
 
 
