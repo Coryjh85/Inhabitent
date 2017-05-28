@@ -12,7 +12,7 @@
 		 <div class="container"> 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-	    <div class="product-picture"> <?php the_post_thumbnail('full'); ?></div>
+	    <div class="product-picture"> <?php the_post_thumbnail('full');?></div>
 			<?php the_title();?>
       <?php echo CFS()->get( 'price' ); ?>
 		<div class="product-listing">	<?php get_template_part( 'template-parts/content', 'single' ); ?></div>

@@ -5,16 +5,16 @@
  * @package inhabitent_theme
  */
 get_header(); ?>
-<section class="main-hero">
+ <section id="main-hero">
 				</section>
-	<div id="primary" class="content-area">
+	
 		  
 		<main id="main" class="site-main" role="main">
-      
+     
 <div class="front-main-container">
-	
-			<h2>Shop Stuff</h2>
-  	<div class="front-products">
+		
+			<h1>Shop Stuff</h2>
+  <div class="front-products">
 			<ul class="shop-card-list">
 				<?php 
 					$categories = array(
@@ -43,12 +43,12 @@ get_header(); ?>
 			</ul>
 		</div>
 	<!-- shop cards -->
-<h2>Inhabitent Journal</h2>
+<h1>Inhabitent Journal</h2>
 		<?php if ( have_posts() ) : ?>
 			<?php if (is_front_page() ) : ?>
-				<header>
+			
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+			
 			<?php endif; ?>
 
 		
@@ -78,7 +78,7 @@ get_header(); ?>
 		</div>
       </div>
 		</main><!-- #main -->
-	</div><!-- #primary -->
+	<!-- #primary -->
 
 
 <?php get_footer(); ?>

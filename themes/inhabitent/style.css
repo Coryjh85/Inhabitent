@@ -224,17 +224,45 @@ th {
 --------------------------------------------------------------*/
 @font-face {
   font-family: 'novecentosanswide';
-  src: url("../../fonts/novecentosanswide-demibold-webfont.eot");
-  src: url("../../fonts/novecentosanswide-demibold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/novecentosanswide-demibold-webfont.woff2") format("woff2"), url("../../fonts/novecentosanswide-demibold-webfont.woff") format("woff"), url("../../fonts/novecentosanswide-demibold-webfont.ttf") format("truetype"), url("../../fonts/novecentosanswide-demibold-webfont.svg#webfontregular") format("svg");
+  src: url("../../assets/fonts/novecentosanswide-demibold-webfont.eot");
+  src: url("../../assets/fonts/novecentosanswide-demibold-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/novecentosanswide-demibold-webfont.woff2") format("woff2"), url("../../assets/fonts/novecentosanswide-demibold-webfont.woff") format("woff"), url("../../assets/fonts/novecentosanswide-demibold-webfont.ttf") format("truetype"), url("../../assets/fonts/novecentosanswide-demibold-webfont.svg#webfontregular") format("svg");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
   font-family: 'novecentosanswide';
-  src: url("../../fonts/novecentosanswide-normal-webfont.eot");
-  src: url("../../fonts/novecentosanswide-normal-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/novecentosanswide-normal-webfont.woff2") format("woff2"), url("../../fonts/novecentosanswide-normal-webfont.woff") format("woff"), url("../../fonts/novecentosanswide-normal-webfont.ttf") format("truetype"), url("../../fonts/novecentosanswide-normal-webfont.svg#webfontregular") format("svg");
+  src: url("../../assets/fonts/novecentosanswide-normal-webfont.eot");
+  src: url("../../assets/fonts/novecentosanswide-normal-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/novecentosanswide-normal-webfont.woff2") format("woff2"), url("../../assets/fonts/novecentosanswide-normal-webfont.woff") format("woff"), url("../../assets/fonts/novecentosanswide-normal-webfont.ttf") format("truetype"), url("../../assets/fonts/novecentosanswide-normal-webfont.svg#webfontregular") format("svg");
   font-weight: normal;
   font-style: normal; }
+
+@font-face {
+  font-family: 'merriweather';
+  src: url("../../assets/fonts/merriweather-bold.eot");
+  src: url("../../assets/fonts/merriweather-bold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/merriweather-bold.woff") format("woff"), url("../../assets/fonts/merriweather-bold.ttf") format("truetype"), url("../../assets/fonts/merriweather-bold.svg#merriweatherbold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'merriweather';
+  src: url("../../assets/fonts/merriweather-bolditalic.eot");
+  src: url("../../assets/fonts/merriweather-bolditalic.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/merriweather-bolditalic.woff") format("woff"), url("../../assets/fonts/merriweather-bolditalic.ttf") format("truetype"), url("../../assets/fonts/merriweather-bolditalic.svg#merriweatherbold_italic") format("svg");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'merriweather';
+  src: url("../../assets/fonts/merriweather-light.eot");
+  src: url("../../assets/fonts/merriweather-light.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/merriweather-light.woff") format("woff"), url("../../assets/fonts/merriweather-light.ttf") format("truetype"), url("../../assets/fonts/merriweather-light.svg#merriweatherlight") format("svg");
+  font-weight: light;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'merriweather';
+  src: url("../../assets/fonts/merriweather-lightitalic.eot");
+  src: url("../../assets/fonts/merriweather-lightitalic.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/merriweather-lightitalic.woff") format("woff"), url("../../assets/fonts/merriweather-lightitalic.ttf") format("truetype"), url("../../assets/fonts/merriweather-lightitalic.svg#merriweatherlight_italic") format("svg");
+  font-weight: light;
+  font-style: italic; }
 
 /*--------------------------------------------------------------
 # Typography
@@ -245,7 +273,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: 'merriweather';
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
@@ -253,12 +281,14 @@ textarea {
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   clear: both;
+  font-family: 'novecentosanswide';
   -ms-flex-align: center;
       align-items: center; }
 
 /* Copy */
 p {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  font-family: 'merriweather'; }
 
 dfn, cite, em, i {
   font-style: italic; }
@@ -436,41 +466,48 @@ a {
 
 /* Menus */
 .menu {
-  -ms-flex-direction: row;
-      flex-direction: row;
-  text-decoration: none;
-  right: 5%; }
+  padding-top: 12px;
+  -ms-flex-align: center;
+      align-items: center;
+  line-height: 28px;
+  text-decoration: none; }
 
-.tent {
-  z-index: 9999;
-  width: 50px;
-  height: 50px;
-  background: url("../../assets/images/logos/inhabitent-logo-tent-white.svg") center;
-  background-size: 50px 50px; }
-
-.menu-div {
-  width: 100vh;
+.nav-width {
+  width: 1100px;
+  margin: 0 auto;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between; }
 
+.tent {
+  z-index: 9999;
+  width: 33px;
+  height: 50px;
+  background-size: 50px 33px; }
+
 .menu li {
-  padding-right: 2%;
-  text-shadow: 1px 1px 2px #3d3d3d; }
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 10px; }
 
 .menu li a {
-  color: white; }
+  font-family: 'novecentosanswide';
+  text-transform: uppercase;
+  color: #248A83 f; }
 
 .menu li a:visited {
-  color: white; }
+  color: #248A83; }
 
 .main-navigation {
-  clear: both;
-  display: block;
-  width: 100%; }
+  position: fixed;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7); }
   .main-navigation ul {
-    display: none;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
     list-style: none;
     margin: 0;
     padding-left: 0; }
@@ -488,7 +525,7 @@ a {
       .main-navigation ul ul li.focus > ul {
         left: 100%; }
       .main-navigation ul ul a {
-        width: 200px; }
+        width: 300px; }
     .main-navigation ul li:hover > ul,
     .main-navigation ul li.focus > ul {
       left: auto; }
@@ -528,6 +565,9 @@ a {
   float: right;
   text-align: right;
   width: 50%; }
+
+ul {
+  padding: 0; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -596,6 +636,9 @@ a {
     max-width: 100%; }
 
 /* Search widget. */
+.widget_search .search-submit {
+  display: none; }
+
 #secondary {
   width: 27%; }
 
@@ -707,19 +750,29 @@ object {
 .main {
   margin: 0 auto; }
 
-.main-hero {
+#main-hero {
+  display: block;
   background: url("../../assets/images/logos/inhabitent-logo-full.svg") center no-repeat, linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(100, 100, 100, 0.5)) center, url("../../assets/images/home-hero.jpg") top no-repeat;
   background-size: 300px, cover, cover;
-  height: 100vh; }
+  height: 100vh;
+  width: 100%; }
 
 .shop-card {
-  max-width: 23%;
+  width: 23%;
+  height: 250px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+      flex-flow: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin: 0 auto;
   text-align: center;
   border: lightgrey 1px solid;
   border-top: lightgrey 5px solid; }
 
 .shop-card-list {
+  width: 1120px;
   list-style-type: none;
   display: -ms-flexbox;
   display: flex;
@@ -742,15 +795,15 @@ object {
 .front-shop-excerpt {
   margin: 0 auto; }
 
-.dots {
-  border-bottom: dotted; }
+.front-products {
+  margin: 0 auto; }
 
 .post {
   display: inline-block;
-  margin: 0 15px;
+  margin: 0 auto;
   text-align: center;
   border: lightgrey 2px solid;
-  width: 300px; }
+  width: 352px; }
 
 .front-main-container {
   margin: 0 auto;
@@ -762,24 +815,23 @@ object {
       justify-content: space-around;
   width: 1120px; }
 
-.site-main {
-  width: 1120px;
-  margin: 0 auto; }
-
 .front-posts {
   width: 1120px;
   margin: 0 auto;
   -ms-flex-line-pack: center;
       align-content: center;
-  padding: 10px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   text-align: center; }
+
+.page-id-25 {
+  margin: 0 auto; }
 
 /* About Page */
 #about-main {
   margin: 0 auto;
-  width: 1120px; }
-
-.s1 .s2 {
   width: 1120px; }
 
 .container {
@@ -831,26 +883,142 @@ h3 {
 .content-area {
   margin: 0 auto; }
 
+.blog-post {
+  padding-top: 50px;
+  margin: 0 auto;
+  position: relative; }
+
+.blog-post-title {
+  display: inline;
+  color: white;
+  background: #248A83;
+  position: absolute;
+  top: 50px;
+  left: 0px; }
+
+.author-date-comments {
+  display: inline;
+  color: white;
+  background: #248A83;
+  position: absolute;
+  right: 50px;
+  bottom: 0px; }
+
 .blog-pic {
-  height: 1026px; }
+  margin: 0 auto;
+  width: 70%;
+  height: auto; }
+
+.page-title {
+  padding-top: 50px;
+  text-transform: uppercase;
+  text-align: center; }
+
+.taxonomy-description {
+  text-align: center; }
+
+.product-type-nav {
+  text-align: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row;
+      flex-flow: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  list-style-type: none; }
+
+.indvid-product-type {
+  width: 10%;
+  display: inline; }
+
+.shop-header {
+  height: 200px;
+  width: 1120px;
+  margin: 0 auto; }
+
+.shop-main-container {
+  width: 1120px;
+  margin: 0 auto; }
 
 .product {
   display: inline-block;
-  margin: 10px 10px;
+  margin: 10px 12.25px;
   border: lightgrey 2px solid;
-  width: 200px; }
+  width: 22.5%; }
+
+.product-picture {
+  height: 220px; }
 
 .wp-post-image {
   object-fit: cover;
   width: inherit;
-  height: 200px; }
+  height: 230px; }
 
-.product-listing {
-  width: 50%; }
+.product-text {
+  display: -ms-flexbox;
+  display: flex; }
+
+.dots {
+  -ms-flex-positive: 2;
+      flex-grow: 2;
+  background-image: linear-gradient(to right, grey 33%, rgba(255, 255, 255, 0) 0%);
+  background-position: bottom;
+  background-size: 4px 2px;
+  background-repeat: repeat-x;
+  margin-bottom: 2px; }
 
 .product-picture {
   height: auto; }
 
-h2 {
-  display: block;
+.container {
+  width: 1120px;
+  margin: 0 auto; }
+
+.site-content {
+  display: -ms-flexbox;
+  display: flex; }
+
+.home .site-content,
+.page-template-page-about .site-content {
+  width: 100%; }
+
+.primary {
+  margin-top: 100px; }
+
+.blog .content-area,
+.page-template-default .content-area,
+.single-post .content-area,
+.single-product .content-area,
+.search .content-area {
+  width: 73%;
+  padding: 3rem 3rem 0 0;
+  margin: 0 0; }
+
+.site {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+      flex-flow: column; }
+
+.single-product .content-area,
+.archive .content-area {
+  width: 100%; }
+
+.widget-area {
+  width: 27%;
+  border-left: 1px solid lightgrey;
+  padding: 3rem 0 0 3rem;
+  padding-top: 0px;
+  margin-top: 75px; }
+
+.site-main {
+  margin-bottom: 6rem; }
+
+.about-content {
+  width: 800px;
+  margin: 0 auto; }
+
+submit {
+  color: white;
+  background-color: #248A83;
   margin: 0 auto; }

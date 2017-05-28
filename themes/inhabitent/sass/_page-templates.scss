@@ -6,7 +6,8 @@
 .main{
   margin:0 auto;
 }
-.main-hero{
+#main-hero{  
+  display:block;
     background:
     url('../../assets/images/logos/inhabitent-logo-full.svg') center no-repeat,
     linear-gradient(to bottom, rgba(0, 0, 0 ,0.5), rgba(100,100,100,0.5)) center,
@@ -16,17 +17,22 @@
     cover,
     cover;
   height: 100vh;
+  width:100%;
 }
 
 .shop-card{
-  max-width:23%;
-  
+  width:23%;
+  height:250px;
+  display:flex;
+  flex-flow:column;
+  justify-content: space-around;
   margin:0 auto;
   text-align: center;
   border:lightgrey 1px solid;
   border-top:lightgrey 5px solid;
 }
 .shop-card-list{
+  width:1120px;
   list-style-type: none;
   display:flex;
   flex-flow:row;
@@ -43,22 +49,20 @@
   background-color: #248A83;
   margin:0 auto;
 }
-.front-shop-icon{
-  
-}
+
 .front-shop-excerpt{
   margin:0 auto;
 }
-
-.dots{
-  border-bottom: dotted;
+.front-products{
+  margin:0 auto;
 }
+
 .post{
  display:inline-block;
-  margin:0 15px;
+  margin:0 auto;
   text-align: center;
   border:lightgrey 2px solid;
-  width:300px;
+  width:352px;
 }
 
 .front-main-container{
@@ -69,17 +73,18 @@
   width:1120px;
 }
 
-.site-main{
-  width:1120px;
-  margin:0 auto;
-}
+
 .front-posts{
   width:1120px;
   margin:0 auto;
   align-content: center;
-  
-  padding:10px;
+  display: flex;
+  justify-content: space-between;
   text-align: center;
+}
+
+.page-id-25{
+  margin:0 auto;
 }
 
 /* About Page */
@@ -88,9 +93,7 @@
   margin:0 auto;
   width:1120px;
 }
-.s1 .s2{
-  width:1120px;
-}
+
 .container{
   width:1120px;
 }
@@ -143,38 +146,164 @@ h3{
 .content-area{
   margin:0 auto;
 }
+.blog-post{
+  padding-top:50px;
+  margin:0 auto;
+  position:relative;
+}
+.blog-post-title{
+  display:inline;
+  color:white;
+  background:#248A83;
+  position:absolute;
+  top:50px;
+  left:0px;
+}
+.author-date-comments{
+  display:inline;
+  color:white;
+  background:#248A83;
+  position:absolute;
+  right:50px;
+  bottom:0px;
+}
 .blog-pic{
-  height:1026px;
+  margin:0 auto;
+width:70%;
+height:auto;
 }
 
 
+//--------shop page----------
+.page-title{
+  padding-top:50px;
+  text-transform: uppercase;
+  text-align: center;
+}
 
+.taxonomy-description{
+ 
+    text-align: center;
+}
+.product-type-nav{
+  text-align: center;
+   display:flex;
+  flex-flow:row;
+  flex-wrap: nowrap;
+  list-style-type: none;
+}
+.indvid-product-type{
+  width:10%;
+  display:inline;
+}
+.shop-header{
+  height: 200px;
+  width:1120px;
+  margin:0 auto;
+}
 
-//--------products----------
-
+.shop-main-container{
+  width:1120px;
+  margin:0 auto;
+}
 .product{
   display:inline-block;
-  margin:10px 10px;
+  margin:10px 12.25px;
   border:lightgrey 2px solid;
-  width:200px;
+  width:22.5%;
 }
-
+.product-picture{
+  height:220px;
+}
 .wp-post-image{
   object-fit: cover;
   width:inherit;
-  height:200px;
+  height:230px;
 }
-
+.product-text{
+  display: flex;
+}
+.dots{
+  flex-grow:2;
+  background-image: linear-gradient(to right, grey 33%, rgba(255,255,255,0) 0%);
+  background-position: bottom;
+  background-size: 4px 2px;
+  background-repeat: repeat-x;
+  margin-bottom:2px;
+}
 //---------Single Products-------//
-.product-listing{
-  width:50%;
-}
+
 
 .product-picture{
   height:auto;
 }
 
-h2{
-  display:block;
+.container{
+	width: 1120px;
+	margin: 0 auto;
+}
+
+.site-content{
+	display: flex;
+}
+.home,
+.page-template-page-about,{
+	.site-content{
+		width: 100%;
+		
+	}
+}
+
+.primary{
+    margin-top:100px;
+}
+
+
+.blog,
+.page-template-default,
+.single-post,
+.single-product,
+.search{
+	.content-area{
+		width: 73%;
+		padding: ($base__space-unit *2) ($base__space-unit *2) 0 0;
+    margin:0 0;
+	}
+}
+
+	.site{
+display:flex;
+flex-flow:column;
+  }
+
+.single-product,
+.archive{
+	.content-area{
+		width: 100%;
+	}
+}
+.widget-area{
+	width: 27%;
+	border-left: 1px solid lightgrey;
+	padding: ($base__space-unit * 2) 0 0 ($base__space-unit*2);
+	padding-top:0px;
+  margin-top:75px;
+  h2{
+	}
+}
+.site-main{
+	margin-bottom: $base__space-unit *4;
+}
+
+
+.about-content{
+	width: 800px;
+	margin: 0 auto;
+}
+
+//-----------------Find Us------------//
+submit{
+    color:white;
+  background-color: #248A83;
   margin:0 auto;
 }
