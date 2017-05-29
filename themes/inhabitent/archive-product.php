@@ -14,7 +14,6 @@
 
 	<header class="shop-header">
 			<h2 class="page-title">Shop Stuff</h2>
-			<!--<?php the_title( '<h1 class="page-title">', '</h1>' ); ?> -->
 			<nav class="product-type">
 				<ul class="product-type-nav">
 					<?php $categories = array(

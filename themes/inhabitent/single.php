@@ -18,8 +18,11 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
         
 			<?php get_template_part( 'template-parts/content', 'single' ); ?>
-
-
+  <div class="social-media-buttons">
+	 <button><i class="fa fa-facebook"></i> Like</button>
+	 <button><i class="fa fa-twitter"></i> Tweet</button>
+	 <button><i class="fa fa-pinterest"></i> Pin</button>
+  </div>
 			<?php
 				if ( comments_open() || get_comments_number() ) :
 					comments_template();

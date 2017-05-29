@@ -53,11 +53,17 @@ a {
 .menu li a{
 	font-family:'novecentosanswide';
 	text-transform: uppercase;
-	color:#248A83
-	f
+	color:#248A83;
+
 }
 .menu li a:visited{
 	color:#248A83;
+}
+.nav-with-mag{
+	i{
+		padding:27px 0px 0px 20px;
+		color:#248a83;
+	}
 }
 .main-navigation {
 	z-index: 99999;
@@ -172,4 +178,13 @@ button{
 	font-weight:lighter;
   font-size:16px;
   font-family:'novecentosanswide';
+}
+
+.nav-with-mag{
+	display:flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+ i{
+	 display:inline;
+ }
 }

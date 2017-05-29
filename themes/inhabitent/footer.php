@@ -52,11 +52,11 @@
 		</div>
 		
 		<div class="site-info">
-			<div class="container">
+			
 				<p class="copyright">
 					Copyright &#169; 2016 Inhabitent
 				</p>
-			</div>
+			
 			<!-- <a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>"><?php printf( esc_html( 'Proudly powered by %s' ), 'WordPress' ); ?></a> -->
 		</div><!-- .site-info -->
 	</div>

@@ -16,7 +16,11 @@
 	display: none;
 }
 .widget-area{
-
+	width: 27%;
+	border-left: 1px solid lightgrey;
+	padding: ($base__space-unit * 2) 0 0 ($base__space-unit*2);
+	padding-top:0px;
+  margin-top:75px;
 }
 #secondary{
 	width:27%;

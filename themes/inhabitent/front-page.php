@@ -57,21 +57,17 @@ get_header(); ?>
         while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
            
 				  <div class = "front-post"> <?php the_post_thumbnail('large') ?> 
-					  <div class="front-post-date"><?php the_time('F jS, Y'); ?> / <?php comments_popup_link('0 comments ', '1 comment', '% comments'); ?>
+					  <div class="front-post-date"><?php the_time('F jS, Y'); ?> / 
+						  <?php comments_popup_link('0 comments ', '1 comment', '% comments'); ?>
 						</div>
-						<h2 class="front-post-title"> <a href="<?php the_permalink() ?>"><?php the_title() ?></a> </h2>
-						<div class="front-blog-url"><a class="read-entry" href="<?php the_permalink() ?>">Read Entry</a>
+						  <h2 class="front-post-title"> <a href="<?php the_permalink() ?>"><?php the_title() ?></a>
+					 </h2>
+						 <div class="front-blog-url"><a class="read-entry" href="<?php the_permalink() ?>">Read Entry</a>
 					</div>
 			 </div>
          
-
-
-				  <?php
-            endwhile;
-						  wp_reset_postdata();?>
+				  <?php endwhile; wp_reset_postdata();?>
    
-         
-
 					<?php /* Start the Loop */ ?>
 			
 			<?php the_posts_navigation(); ?>

@@ -8,7 +8,7 @@ get_header(); ?>
 <section class="about_hero">
 			<h1>About</h1>
 				</section>
-	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
 		
 		<main id="about-main" class="about-main" role="about-main">
       

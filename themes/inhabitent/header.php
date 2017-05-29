@@ -31,13 +31,19 @@
 
  					
 								
-				  <nav id="site-navigation" class="main-navigation" role="navigation">
-					   <span class="nav-width"> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						  <img class="tent" src="<?php echo get_template_directory_uri(). "./assets/images/logos/inhabitent-logo-tent.svg" ?>"  alt="" ?>
-				    </a>
-						  <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>		  	
-				   </span>
-					 </nav><!-- #site-navigation -->			 
+			 <nav id="site-navigation" class="main-navigation" role="navigation">
+				 <section class="nav-width">
+				   <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					   <img class="tent" src="<?php echo get_template_directory_uri(). "./assets/images/logos/inhabitent-logo-tent.svg" ?>"  alt="Home Button" ?>
+				   </a>
+						  <div class="nav-with-mag">
+						   <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) );?> 
+						  
+								 <i class="fa fa-search">
+							 </i>	
+							 </div>  				      
+          </section>
+			  </nav><!-- #site-navigation -->			 
 			 <!--<?php get_search_form(); ?>-->
 			</header><!-- #masthead -->
 
