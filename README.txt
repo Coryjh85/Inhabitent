@@ -1,4 +1,4 @@
-
+<img src="./screenshot.png">
 ##About the Inhabitent Site
 
 The Inhabitent site is meant to be a hipster-styled camping site, with a blog and products for sale
