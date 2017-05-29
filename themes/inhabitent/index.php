@@ -29,27 +29,25 @@ get_header(); ?>
 			
 		<h1 class="blog-post-title"> <?php the_title();?></h1>
 
-	<div class="author-date-comments"><?php red_starter_posted_on(); ?> / 
+  <div class="author-date-comments"><?php red_starter_posted_on(); ?> / 
 		<?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / 
 		<?php red_starter_posted_by(); ?>
 	</div>
-	<div class="front-blog-url"><a class="read-entry" href="<?php the_permalink() ?>">Read More</a>
-					</div>
+  <div class="front-blog-url">
+	  <a class="read-entry" href="<?php the_permalink() ?>">Read More</a>
+	</div>
 </section>
-	  	<p class="blog-post-excerpt"><?php the_excerpt();?>
-   
-	  </p>
+	  	<p class="blog-post-excerpt"><?php the_excerpt();?></p>
 			
-  </page-main>
+</page-main>
+		
 			<?php endwhile; ?>
 			<?php the_posts_navigation(); ?>
 		<?php endif; ?>
 		
 </journal-posts>
 
-
-		
-		</div>
+</div>
 		<?php get_sidebar(); ?>
 		</main><!-- #main -->	
 	</div><!-- #primary -->

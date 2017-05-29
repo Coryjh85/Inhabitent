@@ -41,12 +41,14 @@
 
 
 
-		<?php  while ( have_posts($products) ) : the_post(); ?>
-        <section class = "product"> <a class=".product-picture" href="<?php the_permalink() ?>"><?php the_post_thumbnail('medium');?></a>
-				<div class="product-text">
+		<?php  while ( have_posts() ) : the_post(); ?>
+    <section class = "product"> <a class=".product-picture" href="<?php the_permalink() ?>"><?php the_post_thumbnail('medium');?></a>
+			<div class="product-text">
 				<span class="product-title"><?php the_title();?> </span>
 				<span class="dots"></span>
-				<span class="product-price"><?php echo CFS()->get( 'price' );?></span></div>  </section>
+				<span class="product-price"><?php echo CFS()->get( 'price' );?></span>
+			</div>  
+		</section>
 		<?php endwhile; ?>
         
 			<?php the_posts_navigation(); ?>
