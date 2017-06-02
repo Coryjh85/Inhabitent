@@ -5,7 +5,6 @@
  * @package inhabitent_theme_Theme
  */
 ?>
-<!--  MIGHT WANT TO COME BACK AND ADD A WIDGET TO THE FOOTER FOR THE BUSINESS HOURS, IF NOT REMOVE THIS COMMENT -->
 </div><!-- #content -->
 
 <footer id="colophon" class="site-footer" role="contentinfo">
@@ -57,15 +56,13 @@
 					Copyright &#169; 2016 Inhabitent
 				</p>
 			
-			<!-- <a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>"><?php printf( esc_html( 'Proudly powered by %s' ), 'WordPress' ); ?></a> -->
-		</div><!-- .site-info -->
+		</div>
 	</div>
 	
 </footer><!-- #colophon -->
 </div><!-- #page -->
 
 
-<!-- leave this function in, it puts all the javascript into the theme -->
 <?php wp_footer(); ?>
 
 </body>

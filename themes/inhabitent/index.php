@@ -23,9 +23,9 @@ get_header(); ?>
   <section class="journal-posts">
   	<?php $the_query = new WP_Query( 'posts_per_page=16' );
 		 while ( have_posts() ) : the_post(); ?>      
-  <section class = "blog-post"> 
-		<a class="blog-pic" href="<?php the_permalink() ?>"><?php the_post_thumbnail('full');?>
-	</a>
+       <section class = "blog-post"> 
+		     <a class="blog-pic" href="<?php the_permalink() ?>"><?php the_post_thumbnail('full');?>
+       </a>
 			
 		<h1 class="blog-post-title"> <?php the_title();?></h1>
 
