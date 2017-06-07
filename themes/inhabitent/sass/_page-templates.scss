@@ -151,8 +151,7 @@
     background:linear-gradient(to bottom, rgba(0, 0, 0 ,0.5), rgba(100,100,100,0.5)) center,
       url('../../assets/images/adventure-photos/canoe-girl.jpg') center no-repeat;
 		background-size:530px 550px;
-    	overflow: hidden;
-
+    overflow: hidden;
     width: 530px;
 		height: 550px;
 		button{
@@ -164,9 +163,9 @@
 			position: absolute;
 			top: 195px;
 			left: 25px;
-      &:hover {
-		border-color: #19625D;
-		background: #19625D;
+     &:hover {
+	    	border-color: #19625D;
+		    background: #19625D;
 	}
 		}
 	}
@@ -186,9 +185,9 @@
 			position: absolute;
 			top: 195px;
 			left: 25px;
-      &:hover {
-		border-color: #19625D;
-		background: #19625D;
+    &:hover {
+		    border-color: #19625D;
+		    background: #19625D;
 	}
 		}
 	}
@@ -214,9 +213,9 @@
 			position: absolute;
 			top: 160px;
 			left: 25px;
-      &:hover {
-		border-color: #19625D;
-		background: #19625D;
+     &:hover {
+		   border-color: #19625D;
+		   background: #19625D;
 	}
 		}
 	}

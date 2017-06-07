@@ -343,12 +343,7 @@ html {
 *,
 *:before,
 *:after {
-  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
   box-sizing: inherit; }
-
-body {
-  background: #fff;
-  /* Fallback for when there is no custom background color defined. */ }
 
 blockquote, q {
   quotes: "" ""; }
@@ -383,9 +378,7 @@ dd {
 
 img {
   height: auto;
-  /* Make sure images are scaled correctly. */
-  max-width: 100%;
-  /* Adhere to container width. */ }
+  max-width: 100%; }
 
 table {
   margin: 0 0 1.5rem;
@@ -512,7 +505,8 @@ a {
   z-index: 99999;
   position: fixed;
   width: 100%;
-  background: rgba(255, 255, 255, 0.7); }
+  background: rgba(255, 255, 255, 0.7);
+  /* Small menu. */ }
   .main-navigation ul {
     display: -ms-flexbox;
     display: flex;
@@ -545,54 +539,70 @@ a {
   .main-navigation a {
     display: block;
     text-decoration: none; }
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block; }
-
-@media screen and (min-width: 768px) {
-  .menu-toggle {
-    display: none; }
+  .main-navigation .menu-toggle,
+  .main-navigation .main-navigation.toggled ul {
+    display: block; }
+  @media screen and (min-width: 768px) {
+    .main-navigation .menu-toggle {
+      display: none; }
+    .main-navigation .main-navigation ul {
+      display: block; } }
+  .site-main .main-navigation .comment-navigation, .site-main
+  .main-navigation .posts-navigation, .site-main
+  .main-navigation .post-navigation {
+    margin: 0 0 1.5rem;
+    overflow: hidden; }
+  .main-navigation .comment-navigation .nav-previous,
+  .main-navigation .posts-navigation .nav-previous,
+  .main-navigation .post-navigation .nav-previous {
+    float: left;
+    width: 50%; }
+  .main-navigation .comment-navigation .nav-next,
+  .main-navigation .posts-navigation .nav-next,
+  .main-navigation .post-navigation .nav-next {
+    float: right;
+    text-align: right;
+    width: 50%; }
   .main-navigation ul {
-    display: block; } }
+    padding: 0; }
+  .main-navigation button {
+    font-weight: lighter;
+    font-size: 16px;
+    font-family: 'novecentosanswide'; }
+  .main-navigation .menu-main-menu-container {
+    margin: auto 0; }
+  .main-navigation .nav-with-mag {
+    margin: auto 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; }
+    .main-navigation .nav-with-mag i {
+      display: inline; }
 
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-  margin: 0 0 1.5rem;
-  overflow: hidden; }
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%; }
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%; }
-
-ul {
-  padding: 0; }
-
-button {
-  font-weight: lighter;
-  font-size: 16px;
+fieldset label .search-field {
+  box-shadow: none;
+  color: #248A83;
+  text-transform: uppercase;
+  display: none;
+  background: none;
+  border: none;
   font-family: 'novecentosanswide'; }
 
-.nav-with-mag {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap; }
-  .nav-with-mag i {
-    display: inline; }
+.search-submit {
+  margin: 0 auto;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0px; }
+
+.search-submit:hover {
+  background: none; }
+
+.fa-search {
+  padding-left: 0px; }
 
 /*--------------------------------------------------------------
 # Accessibility

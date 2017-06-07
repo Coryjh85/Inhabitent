@@ -27,9 +27,7 @@
 					</h1>
 				<p class="site-description"> <?php bloginfo( 'description' ); ?>
 			</p>
-				</div><!-- .site-branding -->
-
- 					
+				</div> 					
 								
 			 <nav id="site-navigation" class="main-navigation" role="navigation">
 				 <section class="nav-width">
@@ -37,14 +35,10 @@
 					   <img class="tent" src="<?php echo get_template_directory_uri(). "./assets/images/logos/inhabitent-logo-tent.svg" ?>"  alt="Home Button" ?>
 				   </a>
 						  <div class="nav-with-mag">
-						   <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) );?> 
-						  
-								 <i class="fa fa-search">
-							 </i>	
-							 </div>  				      
+							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?>
+				  	</button>
+              <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); get_search_form($echo = true )?>
+						</div>  				      
           </section>
-			  </nav><!-- #site-navigation -->			 
-			 <!--<?php get_search_form(); ?>-->
-			</header><!-- #masthead -->
-
-			
+			  </nav>	 
+		</header>
