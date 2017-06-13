@@ -5,7 +5,7 @@ The Inhabitent site is meant to be a hipster-styled camping site, with a blog an
 
 ###Technology Used
 
-WordPress 
+  *WordPress 
   *Template Hierarchy
   *Custom Post Types
   *Custom Taxonomy Types
