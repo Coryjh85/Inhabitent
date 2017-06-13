@@ -6,18 +6,17 @@ The Inhabitent site is meant to be a hipster-styled camping site, with a blog an
 ###Technology Used
 
 WordPress 
-  -Template Hierarchy
-  -Custom Post Types
-  -Custom Taxonomy Types
-  -Using Template Parts
-  -Plugin Building (we made a shop hours plugin)
-  -Php (within wordpress)
-
-HTML5
-
-SASS
-GULP 
-GIThub for version control.
+  *Template Hierarchy
+  *Custom Post Types
+  *Custom Taxonomy Types
+  *Using Template Parts
+  *Plugin Building (we made a shop hours plugin)
+  *Php (within wordpress)
+  *VSCode
+  *HTML5
+  *SASS
+  *GULP 
+  *GIThub for version control.
 
 ###Building A Custom Theme with Wordpress.
 
